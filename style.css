@@ -372,7 +372,7 @@ header {
 
 /* MEDIA */
 
-@media (max-width: 765px) {
+@media screen and (max-width: 765px) {
     header {
         padding: 20px 40px;
         width: 100%;
@@ -451,8 +451,20 @@ header {
         color: var(--second-color);
     }
 
+    #container-menu.ativo #button-bar  {
+        background-color: var(--second-color);
+    }
+
     .div-input:nth-child(3) {
         display: block;
+    }
+
+    #section-confirmar_presença .label-input {
+        font-size: 20px;
+    }
+
+    #section-confirmar_presença .container-input {
+        font-size: 15px;
     }
 
     .div-input_contato {
@@ -464,7 +476,7 @@ header {
     }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .nosso-nome {
         font-size: 33px;
     }
@@ -508,7 +520,7 @@ header {
     }
 
     #section-presentes h3 {
-        font-size: 35px;
+        font-size: 34px;
     }
     
     .presentes {
