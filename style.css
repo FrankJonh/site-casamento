@@ -4,11 +4,11 @@
 
 /*=============== Geral ====================*/
 :root {
-    --primary-colorMenu: #687e7b;
-    --primary-colorNomes:  #3a4b4d;
-    --second-color: #aabec0;
-    --third-color: #cde7e9;
-    --for-color: #dcf1f3;
+    --primary-colorMenu: #2f7b8b;
+    --primary-colorNomes:   #164b59;
+    --second-color:  #59b5c0;
+    --third-color: #ade8f1;
+    --for-color: #d4f8fd;
 }
 
 * {
@@ -103,7 +103,7 @@ header {
 
 
 #section-history {
-    background: var(--third-color);
+    background: var(--for-color);
 }
 
 
@@ -229,7 +229,9 @@ header {
 
 /*=============== PRESENTES ====================*/
 
-
+#section-presentes {
+    margin-bottom: 20px;
+}
 
 #section-presentes h3 {
     font-family: 'Great Vibes';
@@ -302,6 +304,8 @@ header {
     color: white;
     
     font-family: 'Montserrat';
+
+    padding-top: 10px;
 }
 
 .confirmar-presenca {
@@ -460,6 +464,10 @@ header {
 
     .div-input:nth-child(3) {
         display: block;
+    }
+
+    .nossa-historia p {
+        font-size: 22px;
     }
 
     #section-confirmar_presença .label-input {
