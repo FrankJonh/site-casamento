@@ -340,42 +340,58 @@ header {
     padding: 30px 0;
 }
 
-#section-confirmar_presença form {
-    padding-left: 30px;
-}
-
 #section-confirmar_presença .label-input,.label-input_contato {
     font-style: normal;
     font-size: 22px;
     line-height: 120%;
+}
 
-    padding-bottom: 30px;
+.container-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    gap: 6px;
+}
+
+.container-form div {
+    margin-bottom: 20px;
 }
 
 #section-confirmar_presença .container-input {
     padding: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     outline: none;
-    font-size: 18px;
-    margin-left: 6px;
+    font-size: 20px;
+    width: 40%;
+    margin-bottom: 20px;
+    padding-left: 10px;
 }
 
 .div-input {
     padding-bottom: 20px;
 }
 
-.label-input_contato  {
-    padding-left: 30px;
-}
-
 .div-input:nth-child(3) {
     display: flex;
 }
 
+#section-confirmar_presença button {
+    width: 30%;
+    height: 45px;
+    background-color: var(--for-color);
+    border: none;
+    border-radius: 20px;
+    margin: 20px auto;
+    font-size: 20px;
+    color: var(--primary-colorNomes);
+    cursor: pointer;
+
+}
+
 /* MEDIA */
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 768px) {
     header {
         padding: 20px 40px;
         width: 100%;
@@ -444,9 +460,14 @@ header {
     #button-menu.active .nosso-nome {
         background-color: var(--primary-colorNomes);
     }
+    
 
     .nosso-nome {
         z-index: 1000;
+    }
+
+    .container-form {
+        margin-left: 70px;
     }
     
     #container-menu.ativo {
@@ -475,7 +496,8 @@ header {
     }
 
     #section-confirmar_presença .container-input {
-        font-size: 15px;
+        font-size: 16px;
+        width: 50%;
     }
 
     .div-input_contato {
@@ -484,6 +506,10 @@ header {
 
     .label-input_contato {
         padding: 0;
+    }
+
+    #section-confirmar_presença button {
+        font-size: 15px;
     }
 }
 
@@ -576,8 +602,9 @@ header {
     #section-confirmar_presença p {
         font-size: 16px;
     }
-    #section-confirmar_presença form {
-        padding-left: 30px;
+    
+    .container-form {
+        margin-left: 50px;
     }
 
     #section-confirmar_presença .label-input,.label-input_contato {
@@ -608,4 +635,9 @@ header {
         padding: 0;
     }
 
+    #section-confirmar_presença button {
+        font-size: 13px;
+        width: 28%;
+        height: 38px;
+    }
 }
