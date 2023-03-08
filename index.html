@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-    <div class="inicio">
+    <section id="inicio">
         <header id="container-menu">
-            <h1 class="nosso-nome">M & J</h1>
+            <a href="#inicio"><h1 class="nosso-nome">M & J</h1></a>
             <nav id="navigation">
                 <ul id="menu">
-                    <a href="#">Nossa Historia</a>
-                    <a href="#">Detalhes</a>
-                    <a href="#">Galeria</a>
-                    <a href="#">Presentes</a>
-                    <a href="#">RSVP</a>
+                    <a href="#history">Nossa Historia</a>
+                    <a href="#detalhes">Detalhes</a>
+                    <a href="#fotos">Galeria</a>
+                    <a href="#presentes">Presentes</a>
+                    <a href="#confirmar_presença">RSVP</a>
                 </ul>
             </nav>
             <class id="button-menu">
@@ -27,15 +27,15 @@
                 <span id="button-bar"></span>
             </class>
         </header>
-    </div>
-    <section id="section-history">
+    </section>
+    <section id="history">
         <div class="nossa-historia">
             <h3>Nossa História</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ad tempore voluptate, itaque accusamus unde accusantium est voluptatem officia qui perferendis, reiciendis ab ipsum minus facilis adipisci quos corrupti. Repellendus.</p>
             <img src="./imagens/casal na praia.jpg" alt="">
         </div>
     </section>
-    <section>
+    <section id="detalhes">
         <div class="container-detalhes">
             <svg width="241" height="99" viewBox="0 0 241 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_3_23)">
@@ -76,7 +76,7 @@
             </svg>
         </div>
     </section>
-    <section id="section-fotos">
+    <section id="fotos">
         <h3>Galeria de Fotos</h3>
         <div class="fotos">
             <img src="./imagens/casal abracado.jfif" alt="">
@@ -87,7 +87,7 @@
             <img src="./imagens/casal se bejando.jfif" alt="">
         </div>
     </section>
-    <section id="section-presentes">
+    <section id="presentes">
         <h3>Lista de Presentes</h3>
         <div class="lista-presentes">
             <div class="presentes">
@@ -140,7 +140,7 @@
             </div>
         </div>
     </section>
-    <section id="section-confirmar_presença">
+    <section id="confirmar_presença">
         <div class="confirmar-presenca">
             <h3>Confirmar Presença</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae ipsum molestias, vel quidem culpa delectus nam possimus, illo ex, blanditiis iusto architecto aperiam beatae debitis nihil natus sequi animi harum!</p>
@@ -160,6 +160,7 @@
         </form>
         <button>Confirmar Presença</button>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>

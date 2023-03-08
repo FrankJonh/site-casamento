@@ -9,6 +9,8 @@
     --second-color:  #59b5c0;
     --third-color: #ade8f1;
     --for-color: #d4f8fd;
+
+    --nav-height: 7.2rem;
 }
 
 * {
@@ -18,10 +20,24 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+    padding: 100px;
+}
+  
 /*=============== HEADER ====================*/
 
 
-.inicio {
+#inicio {
     min-height: 100vh;
     background: url('https://assets-blog.pagseguro.uol.com.br/wp-content/2021/05/passos-para-planejar-um-casamento.jpg') no-repeat top fixed;
     background-size: cover;
@@ -29,7 +45,7 @@
 }
 
 header {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0; 
     width: 100%;
@@ -39,6 +55,28 @@ header {
     align-items: center;
     z-index: 99;
 }
+
+#container-menu a {
+    text-decoration: none;
+}
+
+#container-menu.ativo {
+    background-color: var(--primary-colorMenu);
+    transition: background-color 0.5s ease-in-out;
+}
+
+#container-menu.ativo .nosso-nome, #container-menu.ativo #menu a {
+    color: var(--for-color);
+}
+
+#container-menu.ativo #button-bar  {
+    background-color: var(--for-color);;
+}
+
+#container-menu.ativo, #history {
+    
+}
+
 
 .nosso-nome {
     font-family: 'Alex Brush', cursive;
@@ -102,12 +140,12 @@ header {
 /*=============== NOSSA HOSTORIA ====================*/
 
 
-#section-history {
+#history {
     background: var(--for-color);
 }
 
 
-#section-history .data-casamento h3 {
+#history .data-casamento h3 {
     color: var(--primary-colorMenu);
     font-family: 'Tangerine';
     font-size: 42px;
@@ -197,12 +235,12 @@ header {
 /*=============== FOTOS ====================*/
 
 
-#section-fotos {
+#fotos {
     padding-bottom: 20px;
     background-color: var(--for-color);
 }
 
-#section-fotos h3{
+#fotos h3{
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
@@ -214,7 +252,7 @@ header {
 }
 
 
-#section-fotos img {
+#fotos img {
     width: 378px;
     height: 429px;
 }
@@ -229,11 +267,11 @@ header {
 
 /*=============== PRESENTES ====================*/
 
-#section-presentes {
+#presentes {
     margin-bottom: 20px;
 }
 
-#section-presentes h3 {
+#presentes h3 {
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
@@ -257,7 +295,7 @@ header {
     height: 500px;
     left: 446px;
     top: 211px;
-    background: var(--third-color);
+    background: var(--for-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,15 +335,13 @@ header {
 
 /*=============== CONFIRMAR PRESENÇA ====================*/
 
-#section-confirmar_presença {
+#confirmar_presença {
     background-color: var(--primary-colorMenu);
     display: flex;
     flex-direction: column;
     color: white;
     
     font-family: 'Montserrat';
-
-    padding-top: 10px;
 }
 
 .confirmar-presenca {
@@ -315,7 +351,7 @@ header {
     flex-direction: column;
 }
 
-#section-confirmar_presença h3 {
+#confirmar_presença h3 {
     font-family: 'Great Vibes';
     font-style: normal;
     font-weight: 400;
@@ -327,7 +363,7 @@ header {
 
 }
 
-#section-confirmar_presença p {
+#confirmar_presença p {
     display: flex;
     text-align: center;
     align-items: center;
@@ -340,7 +376,7 @@ header {
     padding: 30px 0;
 }
 
-#section-confirmar_presença .label-input,.label-input_contato {
+#confirmar_presença .label-input,.label-input_contato {
     font-style: normal;
     font-size: 22px;
     line-height: 120%;
@@ -357,7 +393,7 @@ header {
     margin-bottom: 20px;
 }
 
-#section-confirmar_presença .container-input {
+#confirmar_presença .container-input {
     padding: 5px;
     border: none;
     border-radius: 6px;
@@ -376,8 +412,8 @@ header {
     display: flex;
 }
 
-#section-confirmar_presença button {
-    width: 30%;
+#confirmar_presença button {
+    width: 20%;
     height: 45px;
     background-color: var(--for-color);
     border: none;
@@ -402,7 +438,7 @@ header {
         gap: 20px;
     }
 
-    #section-fotos img {
+    #fotos img {
         width: 338px;
         height: 400px;
     }
@@ -470,19 +506,6 @@ header {
         margin-left: 70px;
     }
     
-    #container-menu.ativo {
-        background-color: var(--primary-colorMenu);
-        transition: background-color 0.5s ease-in-out;
-    }
-
-    #container-menu.ativo .nosso-nome {
-        color: var(--for-color);
-    }
-
-    #container-menu.ativo #button-bar  {
-        background-color: var(--for-color);;
-    }
-
     .div-input:nth-child(3) {
         display: block;
     }
@@ -491,11 +514,11 @@ header {
         font-size: 22px;
     }
 
-    #section-confirmar_presença .label-input {
+    #confirmar_presença .label-input {
         font-size: 20px;
     }
 
-    #section-confirmar_presença .container-input {
+    #confirmar_presença .container-input {
         font-size: 16px;
         width: 50%;
     }
@@ -508,7 +531,7 @@ header {
         padding: 0;
     }
 
-    #section-confirmar_presença button {
+    #confirmar_presença button {
         font-size: 15px;
     }
 }
@@ -538,12 +561,12 @@ header {
      display: none;
     }
 
-    #section-fotos h3{
+    #fotos h3{
         font-size: 35px;
     }
     
     
-    #section-fotos img {
+    #fotos img {
         width: 300px;
         height: 350px;
     }
@@ -556,7 +579,7 @@ header {
         gap: 30px;
     }
 
-    #section-presentes h3 {
+    #presentes h3 {
         font-size: 34px;
     }
     
@@ -586,7 +609,7 @@ header {
         margin-top: 4px;
     }
     
-    #section-confirmar_presença {
+    #confirmar_presença {
         background-color: var(--primary-colorMenu);
         display: flex;
         flex-direction: column;
@@ -595,11 +618,11 @@ header {
         font-family: 'Montserrat';
     }
     
-    #section-confirmar_presença h3 {
+    #confirmar_presença h3 {
         font-size: 35px;  
     }
     
-    #section-confirmar_presença p {
+    #confirmar_presença p {
         font-size: 16px;
     }
     
@@ -607,11 +630,11 @@ header {
         margin-left: 50px;
     }
 
-    #section-confirmar_presença .label-input,.label-input_contato {
+    #confirmar_presença .label-input,.label-input_contato {
         font-size: 16px;
     }
 
-    #section-confirmar_presença .container-input {
+    #confirmar_presença .container-input {
         font-size: 14px;
     }
 
@@ -635,7 +658,7 @@ header {
         padding: 0;
     }
 
-    #section-confirmar_presença button {
+    #confirmar_presença button {
         font-size: 13px;
         width: 28%;
         height: 38px;
