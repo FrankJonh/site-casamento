@@ -389,7 +389,6 @@ header {
 .container-form {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
     gap: 6px;
 }
 
@@ -427,6 +426,17 @@ header {
     color: var(--primary-colorNomes);
     cursor: pointer;
 
+}
+
+@media screen and (max-width: 970px) {
+
+    #confirmar_presença .container-input {
+        width: 55%;
+    }
+
+    #confirmar_presença .label-input {
+        font-size: 20px;
+    }
 }
 
 /* MEDIA */
@@ -553,6 +563,20 @@ header {
     #confirmar_presença button {
         font-size: 15px;
     }
+}
+
+@media screen and (max-width: 650px) {
+
+    #confirmar_presença .container-input  {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+#confirmar_presença .container-input {
+    width: 62%;
+}
 }
 
 @media screen and (max-width: 500px) {
