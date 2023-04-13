@@ -430,6 +430,10 @@ header {
 
 @media screen and (max-width: 970px) {
 
+    #menu a::after {
+        display: none;
+    }
+
     #confirmar_presença .container-input {
         width: 55%;
     }
@@ -497,10 +501,12 @@ header {
         display: flex;
         background-color: var(--primary-colorNomes);
         transition: background-color 0.5s ease-in-out;
-    } 
-
-    #menu.active .nosso-nome {
-        color: var(--third-color);
+    }
+    
+    #container-menu.ativo .nosso-nome{
+        color: var(--for-color);  
+        position: relative;
+        z-index: 1000;
     }
 
     #button-menu.active header {
@@ -526,11 +532,6 @@ header {
         background-color: var(--third-color);
     }
     
-
-    .nosso-nome {
-        z-index: 1000;
-    }
-
     .container-form {
         margin-left: 70px;
     }
