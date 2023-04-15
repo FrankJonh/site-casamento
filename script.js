@@ -2,6 +2,7 @@ const btnMenu = document.getElementById('button-menu');
 const navMenu = document.getElementById('menu');
 const menuFixed = document.getElementById('container-menu');
 const nossoNome = document.querySelector('.nosso-nome');
+const menuSelect  = document.querySelectorAll('.link');
 
 window.addEventListener('scroll', activeScroll);
 
@@ -18,6 +19,7 @@ btnMenu.addEventListener('click', ()=> {
 function closeMenu() {
     navMenu.classList.remove('active');
     btnMenu.classList.remove('active');
+
     
 }
 

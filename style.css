@@ -31,7 +31,7 @@ body {
 }
 
 section {
-    padding: 100px;
+    padding: 100px 0;
 }
   
 /*=============== HEADER ====================*/
@@ -112,6 +112,20 @@ header {
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+#menu .link::after.ativo {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--for-color);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(1);
     transition: transform 0.4s;
 }
 
@@ -390,6 +404,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    margin-left: 30px;
 }
 
 .container-form div {
@@ -430,8 +445,28 @@ header {
 
 @media screen and (max-width: 970px) {
 
+    header {
+        padding: 20px 33px;
+    }
+
+    .nosso-nome {
+
+    }
+
+    #menu a {
+        margin-left: 20px;
+    }
+
     #menu a::after {
         display: none;
+    }
+
+    .fotos {
+        padding: 0 20px;
+    }
+
+    #fotos img {
+        width: 366px;
     }
 
     #confirmar_presença .container-input {
@@ -459,10 +494,11 @@ header {
 
     .fotos {
         gap: 20px;
+        padding: 0 20px;
     }
 
     #fotos img {
-        width: 338px;
+        width: 360px;
         height: 400px;
     }
 
@@ -530,10 +566,6 @@ header {
 
     #button-menu.active .nosso-nome {
         background-color: var(--third-color);
-    }
-    
-    .container-form {
-        margin-left: 70px;
     }
     
     .div-input:nth-child(3) {
@@ -674,10 +706,6 @@ header {
         font-size: 16px;
     }
     
-    .container-form {
-        margin-left: 50px;
-    }
-
     #confirmar_presença .label-input,.label-input_contato {
         font-size: 16px;
     }
